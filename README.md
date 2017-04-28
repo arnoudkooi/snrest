@@ -43,7 +43,7 @@ The following example can be used in a client script.
 This example can be used to set the location of an incident, after a CI is selected, based on the location of this CI.
 
 ```javascript
-restRequest({"t":"cmdb_ci","q":"sys_id={0}",vals:[newValue],"f":"location","d":"all"},
+restRequest({"t":"cmdb_ci","q":"sys_id={0}","vals":[newValue],"f":"location","d":"all"},
 	function(resp){
 		var loc = resp[0].location;
 		g_form.setValue('location',loc.value,loc.display_value);
