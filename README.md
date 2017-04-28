@@ -36,3 +36,25 @@ Documentation will be expanded soon...
 | displayValue|d      | string | false               | Return the display value (true), actual value (false), or both (all) for reference fields|                 
 | excludeReferenceLink|e| bool | true                | true to exclude Table API links for reference fields          |
 | suppressPaginationHeader|s| bool | true            | true to supress pagination header          |
+
+
+### Usage example
+The following example can be used in a client script. 
+This example can be used to set the location of an incident, after a CI is selected, based on the location of this CI.
+
+```javascript
+		restRequest({t:'cmdb_ci',q:'sys_id={0}',vals:[newValue],f:'location',d:'all'},
+			function(resp){
+				var loc = resp[0].location;
+				g_form.setValue('location',loc.value,loc.display_value);
+	});
+```
+
+To use this the script has to be available as a global UI script.
+Benefit is you only need a few lines of client-side code, no server-side Script Include AbstractAjaxProcessor is needed :)
+
+
+
+
+
+
