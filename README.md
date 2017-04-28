@@ -1,6 +1,6 @@
 # snrest
 Javascript wrapper for calling ServiceNow REST API.
-Acts as an alternative for simple GlideAjax requests, reuquiering no server side code (script include).\\
+Acts as an alternative for simple GlideAjax requests, reuquiering no server side code (script include).
 
 ## Usage
 ### Generate URL
@@ -25,7 +25,7 @@ Documentation will be expanded soon...
 | Key  		  |Shortcut | Type   |Default              | Description                                                   |
 |-----------|---------| ------ |---------------------|---------------------------------------------------------------|
 | url  		  |u        | string | ''                  | Instance base url default empty when used in current instance |
-| api  		  |a        | string | '/api/now/table/'   | Base url default empty                                        |
+| api  		  |a        | string | '/api/now/table/'   | Endpoint of API to use (currently only table API is supported)                                        |
 | table  		|t        | string | 'incident'          | Table or DB view to perform the operation on                  |
 | fields    |f        | string | ''                  | A comma-separated list of fields to return in the response (all when empty)|
 | view      |v        | string | ''                    | Render the response according to the specified UI view (overridden by fields)|
