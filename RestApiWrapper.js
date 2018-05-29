@@ -22,7 +22,7 @@ function buildRequestString(inpObj){
 		var url = obj.u || obj.url || '';
 		var api = obj.a || obj.api || '/api/now/table/';
 		var table = obj.t || obj.table || 'incident';
-		var sysId = obj.s || obj.sysId || '';
+		var sysId = obj.s || obj.sysId || 'sys_id={0}';
 		var query = obj.q || obj.query || '';
 		var values = obj.vals || obj.values || [];
 		var order = obj.o || obj.order || '';
