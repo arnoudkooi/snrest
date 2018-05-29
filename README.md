@@ -29,7 +29,7 @@ Documentation will be expanded soon...
 | table  		|t        | string | "incident"          | Table or DB view to perform the operation on                  |
 | fields    |f        | string | ""                  | A comma-separated list of fields to return in the response (all when empty)|
 | view      |v        | string | ""                    | Render the response according to the specified UI view (overridden by fields)|
-| query  		|q        | string | ""                  | An encoded query string used to filter the results            |
+| query  		|q        | string | "sys_id={0}"                  | An encoded query string used to filter the results            |
 | values    |vals        | array  | []                  | Values to replace in query ex: ['yes','maybe'] will replace<br />  answer={0}^answer={1} to answer=yes^answer=maybe|
 | order  		|o        | string | "!sys_updated_on"   | Comma separated list of fields to order results by, to order descendant, preceed the field with a ! sign.|
 | limit     |l        | int    | 10                  | The maximum number of results returned per page               |
