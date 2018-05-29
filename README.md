@@ -33,7 +33,7 @@ Documentation will be expanded soon...
 | values    |vals        | array  | []                  | Values to replace in query ex: ['yes','maybe'] will replace<br />  answer={0}^answer={1} to answer=yes^answer=maybe|
 | order  		|o        | string | "!sys_updated_on"   | Comma separated list of fields to order results by, to order descendant, preceed the field with a ! sign.|
 | limit     |l        | int    | 10                  | The maximum number of results returned per page               |
-| displayValue|d      | string | false               | Return the display value (true), actual value (false), or both (all) for reference fields|                 
+| displayValue|d      | string | all               | Return the display value (true), actual value (false), or both (all) for reference fields|                 
 | excludeReferenceLink|e| bool | true                | true to exclude Table API links for reference fields          |
 | suppressPaginationHeader|s| bool | true            | true to supress pagination header          |
 
