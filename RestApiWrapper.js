@@ -43,7 +43,7 @@ function buildRequestString(inpObj){
 			var view = obj.v || obj.view || '';
 			
 			var result = url + api + table + '?sysparm_query=' + query +
-			'&sysparm_display_value=' + obj.d || obj.displayValue || 'all' +
+			'&sysparm_display_value=' + displayValue +
 			'&sysparm_exclude_reference_link='+ excludeReferenceLink +
 			'&sysparm_suppress_pagination_header=' + suppressPaginationHeader +
 			((fields) ? '&sysparm_fields='+ fields : '' )+
