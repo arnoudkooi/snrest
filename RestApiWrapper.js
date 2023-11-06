@@ -1,18 +1,25 @@
 function restRequest(inpObj, callback) {
-	jQuery.ajax({
-		url: buildRequestString(inpObj),
-		method: 'GET',
-		headers: {
-			'X-UserToken': g_ck,
-			'Cache-Control': 'no-cache',
-			'Accept': 'application/json',
-			'Content-Type': 'application/json'
-		}
-	}).done(function (rspns) {
-		callback(rspns.result);
-	}).fail(function (jqXHR, textStatus) {
-		callback(textStatus);
-	});
+    fetch(buildRequestString(inpObj), {
+        method: 'GET',
+        headers: {
+            'X-UserToken': g_ck,
+            'Cache-Control': 'no-cache',
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        callback(data.result);
+    })
+    .catch(error => {
+        callback(error.message);
+    });
 }
 
 
